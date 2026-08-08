@@ -1,0 +1,3 @@
+"""
+RetailFlow source package.
+"""
