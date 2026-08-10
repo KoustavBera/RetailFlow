@@ -55,7 +55,7 @@ RetailFlow/
 ### Prerequisites
 - Python 3.9+
 - Docker & Docker Compose
-- AWS credentials configured (for S3 ingestion)
+- AWS credentials configured (for S3 ingestion).
 
 ### Installation
 1. Clone the repository and navigate to the root directory.
