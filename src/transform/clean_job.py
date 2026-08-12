@@ -37,7 +37,7 @@ def main():
         .config("spark.sql.parquet.compression.codec", "snappy")
         .getOrCreate()
     )
-
+    
     # TODO: 🔧 UPDATE these to YOUR actual bucket names!
     raw_bucket = "retailflow-raw-kb082026"
     processed_bucket = "retailflow-processed-kb082026"
