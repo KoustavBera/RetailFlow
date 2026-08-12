@@ -52,7 +52,7 @@ jobs:
           java-version: "11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.8.1/constraints-3.9.txt" -r requirements.txt
 
       - name: Init DB schema
         run: |

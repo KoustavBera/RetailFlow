@@ -1,1 +1,58 @@
+# Environment
 .env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Airflow
+logs/
+airflow.db
+airflow.cfg
+standalone_admin_password.txt
+
+# Spark
+derby.log
+metastore_db/
+spark-warehouse/
+
+# Data files
+data/raw/*.csv
+data/raw/*.parquet
+data/processed/
+
+# Great Expectations
+great_expectations/uncommitted/
+
+# Docker
+postgres_data/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jars (keep index files out too)
+jars/*.jar

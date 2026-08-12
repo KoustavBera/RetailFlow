@@ -11,7 +11,7 @@ class Transformer(ABC):
     @abstractmethod
     def transform(self, df: DataFrame) -> DataFrame:
         ...
-
+        
 
 class TypeCastTransformer(Transformer):
     """Cast raw string columns to proper types."""
