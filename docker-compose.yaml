@@ -1,18 +1,21 @@
-version: '3.8'
-
+# docker-compose.yaml
 services:
   postgres:
-    image: postgres:15-alpine
-    container_name: retailflow_postgres
+    image: postgres:16
+    container_name: retailflow-postgres
     environment:
-      POSTGRES_USER: retailflow_user
-      POSTGRES_PASSWORD: retailflow_password
-      POSTGRES_DB: retailflow_db
+      # WHY: These create the admin user + database automatically on first boot
+      POSTGRES_USER: retailflow
+      POSTGRES_PASSWORD: retailflow
+      POSTGRES_DB: retailflow
     ports:
+      # WHY: Maps container's 5432 to YOUR laptop's 5432,
+      # so your Python code connects to "localhost" normally
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./src/warehouse/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      # WHY: Without this, your data would VANISH when the container stops.
+      # A volume = a persistent folder the container mounts.
+      - pgdata:/var/lib/postgresql/data
 
 volumes:
-  postgres_data:
+  pgdata:
